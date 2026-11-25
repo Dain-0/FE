@@ -11,7 +11,7 @@ React, Vite, TypeScript, Flutter,Kotlin.Node.js
 한 줄 소개 · 프론트엔드 담당(개인페이지)
 👉 [상세 보기](./project-1-창업동아리/README.md)
 
-### 2. 프로젝트명 (해커톤, 2025.11)
+### 2. BridgeOn (해커톤, 2025.11)
 한 줄 소개 · 프론트엔드 담당
 👉 [상세 보기](./project-2-해커톤/README.md)
 
