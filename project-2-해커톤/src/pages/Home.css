@@ -1,0 +1,266 @@
+/* Home.css */
+@font-face {
+  font-family: "Jalnan2TTF";
+  src: url("../assets/fonts/Jalnan2TTF.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("../assets/fonts/Pretendard-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("../assets/fonts/Pretendard-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Jalnan2TTF", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+:root { --safe-b: env(safe-area-inset-bottom, 0px); }
+
+.PhoneCanvas {
+  overflow: hidden;
+}
+.HomeScene {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+.PhoneFrame.HomeScene {
+  overflow: hidden;
+}
+
+
+.HomeScene .home-content{
+  position: relative;
+  inset: auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  background-color: #fff;
+  z-index: 50;
+
+  --content-pad: 16px;
+  padding: var(--content-pad);
+}
+.HomeScene .home-content::-webkit-scrollbar{
+  width: 0; height: 0; display: none;
+}
+
+
+.HomeScene .top-banner{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  padding: 40px 16px 24px 16px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.HomeScene .top-banner .logo{
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--bridge-on-blue, #4650FF);
+  min-width: 0;
+}
+
+.HomeScene .top-banner .header-buttons{ display:flex; align-items:center; }
+.HomeScene .top-banner .top-icons{ display:flex; gap: 15px; }
+
+.noticeBtn{ 
+  width:24px; 
+  height:24px; 
+  display:block; 
+}
+
+.searchBtn {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+
+.HomeScene .banner-container{
+  margin-left: calc(-1 * var(--content-pad));
+  margin-right: calc(-1 * var(--content-pad));
+  overflow: hidden;
+}
+
+
+.HomeScene .banner-container .banner{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.HomeScene .bottom-tab{
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.foundation-guide-comment {
+  font-family: "Pretendard-SemiBold";
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+/* 카테고리 */
+/* 카테고리 가로 슬라이더 */
+.categories{
+  /* 가로로 흐르게 */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 25%;
+  gap: 0;
+  
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+
+  /* 스냅(슬라이드 느낌) */
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 16px;
+
+  /* 여백 */
+  margin: 6px 0 10px;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.categories > div{
+  scroll-snap-align: start;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 6px 0;
+}
+
+/* 아이콘 이미지 */
+.categories > div img{
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+/* 라벨 텍스트 */
+.categories > div p{
+  font-family: "Pretendard-Regular";
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #111;
+}
+
+.categories::-webkit-scrollbar{ height: 0; width: 0; }
+.categories{ scrollbar-width: none; }
+
+
+/* ========== 이달의 추천 창업 정보 ========== */
+.monthly-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 16px;
+  margin-bottom: 100px;
+}
+
+/* 제목 */
+.monthly-info .foundation-guide-comment {
+  grid-column: 1;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* 더보기 */
+.monthly-info .monthly-more {
+  grid-column: 2;
+  justify-self: end;
+
+  text-decoration: none;
+  color: #9ca3af;
+  font-family: "Pretendard-Regular";
+  font-size: 13px;
+
+  background: none;
+  border: 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+/* hover/active/focus 상태 */
+.monthly-info .monthly-more:hover { color: #6b7280; }
+.monthly-info .monthly-more:active { transform: translateY(1px); }
+.monthly-info .monthly-more:focus-visible {
+  outline: 2px solid #e5e7eb;
+  outline-offset: 2px;
+}
+
+.monthly-info .monthly-banners {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+}
+
+.HomeScene .banner-trend {
+  margin-top: -100px; /* 배너를 위로 올림 (원하는 만큼 조정 가능) */
+  padding: 0 5px;   /* 좌우 여백만 주고 위아래는 제거 */
+}
+
+
+.HomeScene .banner-trend .banner{
+   display: block;
+  width: 100%;
+  height: auto;          
+  border-radius: 20px;   
+  object-fit: contain;  /* 잘리지 않고 전체가 보이도록 */
+ }                     
