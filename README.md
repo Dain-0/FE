@@ -14,13 +14,13 @@ React, Vite, TypeScript, Flutter, JavaScript, HTML5, CSS, Node.js
  
 한 줄 소개 · 프론트엔드 담당 (개인 페이지)
  
-👉 [상세 보기](https://여기에-Plain-상세-링크)
+👉 [상세 보기](https://github.com/Dain-0/FE/tree/main/project-1-창업동아리)
  
 ### 2. BridgeOn (해커톤, 2025.11)
  
 한 줄 소개 · 프론트엔드 담당
  
-👉 [상세 보기](https://여기에-BridgeOn-상세-링크)
+👉 [상세 보기](https://github.com/Dain-0/FE/tree/main/project-2-해커톤)
  
 ## 연락처
  
