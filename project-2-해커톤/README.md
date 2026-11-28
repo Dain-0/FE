@@ -16,4 +16,3 @@
 ## 기술 스택
 React, Vite, JavaScript ,TypeScript, HTML5, CSS 등
 
-## 화면
